@@ -14,11 +14,19 @@ button.addEventListener('click', ()=> {
   console.log(userGuess.value)
   // get user input
   if(Number(userGuess.value) == randomNumber) {
-      console.log('You guessed it!')
+    const resultText = "You guessed it!"
+    resultMessage.textContent = resultText
+    
+    
   } else if (Number(userGuess.value) < randomNumber) {
-      console.log('Guess higher!')
+      
+      const resultText = "Guess Higher!"
+      resultMessage.textContent = resultText
+
   } else if (Number(userGuess.value) > randomNumber) {
-      console.log('Too high! Guess again.')
+      
+      const resultText = "Too high. Guess again!"
+      resultMessage.textContent = resultText
   }
   
   
