@@ -28,6 +28,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    margin: 15px;
 }
 
 section {
@@ -110,4 +111,8 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  button {
+      margin-top: 15px;
   }
