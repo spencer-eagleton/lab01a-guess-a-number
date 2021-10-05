@@ -1,5 +1,6 @@
 {
-  "extends": ["eslint:recommended"],
+  "extends": ["eslint:recommended"], "plugin:cypress/recommended"],
+
   "parserOptions": {
     "ecmaVersion": 8,
     "ecmaFeatures": {
