@@ -5,7 +5,7 @@ const resultMessage = document.getElementById('result-message');
 const guessesLeftDisplay = document.getElementById('guesses-left-display');
 
 // initialize global state
-let randomNumber = [Math.floor(Math.random() * 20)];
+let randomNumber = Math.floor(Math.random() * 20);
 console.log(randomNumber);
 
 let guessesLeft = 4;
@@ -23,10 +23,11 @@ button.addEventListener('click', ()=> {
   
   // get user input
     if (Number(userGuess.value) === randomNumber) {
+        console.log(randomNumber);
         const resultText = 'You guessed it!';
+        
         resultMessage.textContent = resultText;
-    
-    
+        console.log(resultText);
     } else if (guessesLeft === 0) {
         const resultText = 'Sorry, you\'re a loser, refresh page to try again';
         resultMessage.textContent = resultText;
