@@ -1,8 +1,9 @@
 // import functions and grab DOM elements
 const userGuess = document.getElementById('user-guess');
-const button = document.getElementById('button');
+const guessButton = document.getElementById('guess-button');
 const resultMessage = document.getElementById('result-message');
 const guessesLeftDisplay = document.getElementById('guesses-left-display');
+const playAgain = document.getElementById('play-again');
 
 // initialize global state
 let randomNumber = Math.floor(Math.random() * 20);
@@ -16,7 +17,7 @@ let guessesLeft = 4;
 
 
 // set event listeners 
-button.addEventListener('click', ()=> {
+guessButton.addEventListener('click', ()=> {
     guessesLeft --;
     guessesLeftDisplay.textContent = guessesLeft;
    
@@ -56,4 +57,14 @@ button.addEventListener('click', ()=> {
   // update DOM to reflect the new state
 });
 
+playAgain.addEventListener('click', ()=>{
+    
+    let randomNumber = Math.floor(Math.random() * 20);
+    console.log('random nummber:', randomNumber);
 
+    guessesLeft = 4;
+    
+    guessesLeftDisplay.textContent = 4;
+    
+
+});
