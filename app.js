@@ -6,7 +6,7 @@ const guessesLeftDisplay = document.getElementById('guesses-left-display');
 const playAgain = document.getElementById('play-again');
 const hiddenImg = document.getElementById('dancing-guy');
 const winSpan = document.getElementById('wins');
-const lossSpan =document.getElementById('losses');
+const lossSpan = document.getElementById('losses');
 
 // initialize global state
 let randomNumber = Math.floor(Math.random() * 20);
@@ -18,7 +18,7 @@ let losses = 0;
 
 
 function rename(rDisplay, rText){
-    rDisplay.textContent = rText
+    rDisplay.textContent = rText;
 }
 
 
@@ -29,24 +29,24 @@ function rename(rDisplay, rText){
 guessButton.addEventListener('click', ()=> {
     guessesLeft --;
     guessesLeftDisplay.textContent = guessesLeft;
-    console.log(randomNumber);
+    // console.log(randomNumber);
     
   
   // get user input
     if (Number(userGuess.value) === randomNumber) {
         const resultText = 'You guessed it!';
         hiddenImg.classList.remove('hidden');
-        rename(resultMessage,  resultText);
+        rename(resultMessage, resultText);
         wins ++;
-        winSpan.textContent= wins;
+        winSpan.textContent = wins;
         
 
 
     } else if (guessesLeft === 0) {
         const resultText = 'Sorry, you\'re a loser, refresh page to try again';
-        rename(resultMessage,  resultText);
+        rename(resultMessage, resultText);
         losses ++;
-        lossSpan.textContent =losses;
+        lossSpan.textContent = losses;
         
     } else if (guessesLeft < 0) {
         const resultText = 'Wow, you don\'t know when to give up. Hit refresh, loser!';
@@ -57,13 +57,13 @@ guessButton.addEventListener('click', ()=> {
     } else if (Number(userGuess.value) < randomNumber) {
       
         const resultText = 'Guess Higher!';
-        rename(resultMessage,  resultText);
+        rename(resultMessage, resultText);
 
      
     } else if (Number(userGuess.value) > randomNumber) {
       
         const resultText = 'Too high. Guess again!';
-        rename(resultMessage,  resultText);
+        rename(resultMessage, resultText);
     }
    
     
@@ -82,7 +82,7 @@ playAgain.addEventListener('click', ()=>{
     resultMessage.textContent = '  ';
     // console.log(randomNumber, randomNumber2)
     randomNumber = randomNumber2;
-    return randomNumber
+    return randomNumber;
     
 
 });
