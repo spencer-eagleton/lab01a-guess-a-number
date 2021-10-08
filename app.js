@@ -79,7 +79,7 @@ playAgain.addEventListener('click', ()=>{
     guessesLeft = 4;
     hiddenImg.classList.add('hidden');
     guessesLeftDisplay.textContent = 4;
-    resultMessage.textContent = '';
+    resultMessage.textContent = '  ';
     // console.log(randomNumber, randomNumber2)
     randomNumber = randomNumber2;
     return randomNumber
